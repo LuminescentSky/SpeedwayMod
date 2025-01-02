@@ -18,7 +18,8 @@
 			try {
 				RomPatcherWeb.initialize({
 					language: 'en', //default: en
-					requireValidation: false,
+					requireValidation: false
+				}, {
 					patches:[{
 						file: './speedwaymod-releases/Speedway Mod 0.2 Beta PS1 NTSC-U.xdelta', //zip containing patches
 						name: 'PS1 NTSC-U',
@@ -36,7 +37,7 @@
 						name: 'PS2 PAL',
 						outputName: 'Speedway Mod 0.2 Beta PS2 PAL.bin', //patched ROM name
 					}];
-				}
+				});
 			} catch (err) {
 				var message = err.message;
 				if (/incompatible browser/i.test(message) || /variable RomPatcherWeb/i.test(message))
