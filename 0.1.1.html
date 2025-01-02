@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html translate="no">
 
+<!--
+Note for myself on how to add new versions:
+- Duplicate this file
+- Replace all version string with new version string
+- Change const selectedVersion
+- Add xdelta and cue files to the correct directory
+- In more-extra-js.js: Add new version
+-->
+
 <head>
 	<title>Rom Patcher JS - Custom patcher template</title>
 	<meta http-equiv="content-Type" content="text/html; charset=UTF-8" />
@@ -24,26 +33,29 @@
 			file: './speedwaymod-releases/0.1.1.zip', //zip containing patches
 			patches: [ //information about patches inside the zip
 				{
-					file: 'Speedway Mod 0.1.1 Beta PS1 NTSC-U.xdelta', //zip containing patches
-					name: 'PS1 NTSC-U',
-					outputName: 'Speedway Mod 0.1.1 Beta PS1 NTSC-U.bin', //patched ROM name
-				},{
 					file: 'Speedway Mod 0.1.1 Beta PS1 PAL.xdelta', //zip containing patches
 					name: 'PS1 PAL',
 					outputName: 'Speedway Mod 0.1.1 Beta PS1 PAL.bin', //patched ROM name
 				},{
-					file: 'Speedway Mod 0.1.1 Beta PS2 NTSC-U.xdelta', //zip containing patches
-					name: 'PS2 NTSC-U',
-					outputName: 'Speedway Mod 0.1.1 Beta PS2 NTSC-U.bin', //patched ROM name
-				},{
 					file: 'Speedway Mod 0.1.1 Beta PS2 PAL.xdelta', //zip containing patches
 					name: 'PS2 PAL',
 					outputName: 'Speedway Mod 0.1.1 Beta PS2 PAL.bin', //patched ROM name
+				},{
+					file: 'Speedway Mod 0.1.1 Beta PS1 NTSC-U.xdelta', //zip containing patches
+					name: 'PS1 NTSC-U',
+					outputName: 'Speedway Mod 0.1.1 Beta PS1 NTSC-U.bin', //patched ROM name
+				},{
+					file: 'Speedway Mod 0.1.1 Beta PS2 NTSC-U.xdelta', //zip containing patches
+					name: 'PS2 NTSC-U',
+					outputName: 'Speedway Mod 0.1.1 Beta PS2 NTSC-U.bin', //patched ROM name
 				}
 			]
 		});
 	});
+	const selectedVersion = 1;
 	</script>
+
+	<script type="text/javascript" src="./rom-patcher-js/more-extra-js.js"></script>
 </head>
 
 <body style="font: 15px 'Open Sans', sans-serif; background-color: #31343a; color: #e4e4e6;">
@@ -68,6 +80,12 @@
 		The rest of elements are informative and can be removed, though it's recommended to keep them for a better user experience.
 	-->
 	<div id="rom-patcher-container">
+			<div class="text-right"><label for="versionSelectDiv">Mod Version:</label>
+			</div>
+			<div class="rom-patcher-container-input">
+				<select id="versionSelect" onchange="changeVersion()"></select>
+			</div>
+		</div>
 		<div class="rom-patcher-row margin-bottom" id="rom-patcher-row-file-rom">
 			<div class="text-right"><label for="rom-patcher-input-file-rom" data-localize="yes">Spyro 1 ROM file:</label></div>
 			<div class="rom-patcher-container-input">
@@ -114,7 +132,7 @@
 			<div id="rom-patcher-row-error-message" class="margin-bottom"><span id="rom-patcher-error-message"></span>
 			</div>
 			<button id="rom-patcher-button-apply" data-localize="yes" disabled>Apply patch</button>
-			<button id="download-cue">Download CUE</button>
+			<button onclick="downloadCue('0.1.1 Beta')">Download CUE</button>
 		</div>
 	</div>
 
