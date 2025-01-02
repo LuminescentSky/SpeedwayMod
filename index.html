@@ -14,39 +14,34 @@
 
 	<!-- Rom Patcher JS initialization -->
 	<script type="text/javascript">
-		window.addEventListener('load', function (evt) {
-			try {
-				RomPatcherWeb.initialize({
-					language: 'en', //default: en
-					requireValidation: false
-				}, {
-					patches:[{
-						file: './speedwaymod-releases/Speedway Mod 0.2 Beta PS1 NTSC-U.xdelta', //zip containing patches
-						name: 'PS1 NTSC-U',
-						outputName: 'Speedway Mod 0.2 Beta PS1 NTSC-U.bin', //patched ROM name
-					},{
-						file: './speedwaymod-releases/Speedway Mod 0.2 Beta PS1 PAL.xdelta', //zip containing patches
-						name: 'PS1 PAL',
-						outputName: 'Speedway Mod 0.2 Beta PS1 PAL.bin', //patched ROM name
-					},{
-						file: './speedwaymod-releases/Speedway Mod 0.2 Beta PS2 NTSC-U.xdelta', //zip containing patches
-						name: 'PS2 NTSC-U',
-						outputName: 'Speedway Mod 0.2 Beta PS2 NTSC-U.bin', //patched ROM name
-					},{
-						file: './speedwaymod-releases/Speedway Mod 0.2 Beta PS2 PAL.xdelta', //zip containing patches
-						name: 'PS2 PAL',
-						outputName: 'Speedway Mod 0.2 Beta PS2 PAL.bin', //patched ROM name
-					}];
-				});
-			} catch (err) {
-				var message = err.message;
-				if (/incompatible browser/i.test(message) || /variable RomPatcherWeb/i.test(message))
-					message = 'Your browser is outdated and it is not compatible with this app.';
-
-				document.getElementById('rom-patcher-container').innerHTML = message;
-				document.getElementById('rom-patcher-container').style.color = 'red';
-			}
+	window.addEventListener('load', function(){
+		const myPatcherSettings={
+			language: 'en',
+			requireValidation: false, /* if true, user won't be able to apply patch if the provided ROM is not valid*/
+			allowDropFiles: true /* if true, it adds basic drag and drop support */
+		};
+		RomPatcherWeb.initialize(myPatcherSettings, {
+			patches: [ //information about patches inside the zip
+				{
+					file: './speedwaymod-releases/Speedway Mod 0.2 Beta PS1 NTSC-U.xdelta', //zip containing patches
+					name: 'PS1 NTSC-U',
+					outputName: 'Speedway Mod 0.2 Beta PS1 NTSC-U.bin', //patched ROM name
+				},{
+					file: './speedwaymod-releases/Speedway Mod 0.2 Beta PS1 PAL.xdelta', //zip containing patches
+					name: 'PS1 PAL',
+					outputName: 'Speedway Mod 0.2 Beta PS1 PAL.bin', //patched ROM name
+				},{
+					file: './speedwaymod-releases/Speedway Mod 0.2 Beta PS2 NTSC-U.xdelta', //zip containing patches
+					name: 'PS2 NTSC-U',
+					outputName: 'Speedway Mod 0.2 Beta PS2 NTSC-U.bin', //patched ROM name
+				},{
+					file: './speedwaymod-releases/Speedway Mod 0.2 Beta PS2 PAL.xdelta', //zip containing patches
+					name: 'PS2 PAL',
+					outputName: 'Speedway Mod 0.2 Beta PS2 PAL.bin', //patched ROM name
+				}
+			]
 		});
+	});
 	</script>
 </head>
 
