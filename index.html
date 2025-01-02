@@ -17,6 +17,8 @@
 		window.addEventListener('load', function (evt) {
 			try {
 				RomPatcherWeb.initialize({
+					language: 'en', //default: en
+					requireValidation: false,
 					patches:[{
 						file: './speedwaymod-releases/Speedway Mod 0.2 Beta PS1 NTSC-U.xdelta', //zip containing patches
 						name: 'PS1 NTSC-U',
