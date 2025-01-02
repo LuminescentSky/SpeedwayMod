@@ -16,5 +16,5 @@ function changeVersion() {
 
 function downloadCue(version) {
 	var platformRegion = document.getElementById("rom-patcher-select-patch").options[document.getElementById("rom-patcher-select-patch").selectedIndex].text;
-	window.location.href("./speedwaymod-releases/cue/Speedway Mod " + version + " " + platformRegion + ".cue");
+	window.location.href = "./speedwaymod-releases/cue/Speedway Mod " + version + " " + platformRegion + ".cue";
 }
