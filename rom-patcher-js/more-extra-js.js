@@ -1,6 +1,6 @@
-document.getElementById("versionSelect").innerHTML += "<option value='0'>BETA 0.1</option>";
-document.getElementById("versionSelect").innerHTML += "<option value='1'>BETA 0.1.1</option>";
-document.getElementById("versionSelect").innerHTML += "<option value='2'>BETA 0.2 (Latest)</option>";
+document.getElementById("versionSelect").innerHTML += "<option value='0'>Speedway Mod 0.1 Beta</option>";
+document.getElementById("versionSelect").innerHTML += "<option value='1'>Speedway Mod 0.1.1 Beta</option>";
+document.getElementById("versionSelect").innerHTML += "<option value='2'>Speedway Mod 0.2 Beta (Latest)</option>";
 
 document.getElementById("versionSelect").value = selectedVersion;
 
