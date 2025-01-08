@@ -31,30 +31,22 @@ Note for myself on how to add new versions:
 			allowDropFiles: true /* if true, it adds basic drag and drop support */
 		};
 		RomPatcherWeb.initialize(myPatcherSettings, {
-			file: './speedwaymod-releases/0.2.zip', //zip containing patches
+			file: './speedwaymod-releases/0.3.1.zip', //zip containing patches
 			patches: [ //information about patches inside the zip
 				{
-					file: 'Speedway Mod 0.2 Beta PS1 PAL.xdelta', //zip containing patches
+					file: 'Speedway Mod 0.3.1 Beta PS1 PAL.xdelta', //zip containing patches
 					name: 'PS1 PAL',
-					outputName: 'Speedway Mod 0.2 Beta PS1 PAL', //patched ROM name
+					outputName: 'Speedway Mod 0.3.1 Beta PS1 PAL', //patched ROM name
 				},{
-					file: 'Speedway Mod 0.2 Beta PS2 PAL.xdelta', //zip containing patches
+					file: 'Speedway Mod 0.3.1 Beta PS2 PAL.xdelta', //zip containing patches
 					name: 'PS2 PAL',
-					outputName: 'Speedway Mod 0.2 Beta PS2 PAL', //patched ROM name
-				},{
-					file: 'Speedway Mod 0.2 Beta PS1 NTSC-U.xdelta', //zip containing patches
-					name: 'PS1 NTSC-U',
-					outputName: 'Speedway Mod 0.2 Beta PS1 NTSC-U', //patched ROM name
-				},{
-					file: 'Speedway Mod 0.2 Beta PS2 NTSC-U.xdelta', //zip containing patches
-					name: 'PS2 NTSC-U',
-					outputName: 'Speedway Mod 0.2 Beta PS2 NTSC-U', //patched ROM name
+					outputName: 'Speedway Mod 0.3.1 Beta PS2 PAL', //patched ROM name
 				}
 			]
 		});
-		RomPatcherWeb.pickEmbededFile("Speedway Mod 0.2 Beta PS1 PAL.xdelta");
+		RomPatcherWeb.pickEmbededFile("Speedway Mod 0.3.1 Beta PS1 PAL.xdelta");
 	});
-	const selectedVersion = 2;
+	const selectedVersion = 4;
 	</script>
 </head>
 
@@ -127,7 +119,7 @@ Note for myself on how to add new versions:
 			<div id="rom-patcher-row-error-message" class="margin-bottom"><span id="rom-patcher-error-message"></span>
 			</div>
 			<button id="rom-patcher-button-apply" data-localize="yes" style="background-color: #6c1175" disabled>Apply patch</button>
-			<button onclick="downloadCue('0.2 Beta')" style="background-color: #6c1175">Download CUE</button>
+			<button onclick="downloadCue('0.3.1 Beta')" style="background-color: #6c1175">Download CUE</button>
 		</div>
 	</div>
 	<div id="rom-patcher-container" style="background-color: #080808;">
@@ -137,13 +129,13 @@ Note for myself on how to add new versions:
 		</center>
 	</div>
 		<p>
-			You need to acquire a legal copy of Spyro the Dragon (either PAL or NTSC-U), extract its .bin file and select it as the "Spyro 1 ROM file".
+			You need to acquire a legal copy of Spyro the Dragon (PAL), extract its .bin file and select it as the "Spyro 1 ROM file".
 		</p><p>
 			To play on PS2, choose one of the PS2 versions under "Platform and Region". For any other platform (PS1, PS3, Emulator etc.), choose one of the PS1 versions.
 		</p><p>
 			To play burned discs on original hardware, modding the console through tools such as <a href="https://github.com/MechaResearch/MechaPwn" style="color: #b688ba">MechaPwn</a> is required. Only use CDs; DVDs will not work!
 		</p><p>
-			Once you are loaded into the game, supercharge sharp turning (by holding down left or down right) might not work immediately. If this is the case, use R3 + Up/Down to calibrate the sharp turn offset. Usually, the offset should be somewhere between -4 and 4 (available in version 0.2 Beta and later. To fix sharp turning in an earlier version, try reconnecting your controller and pray).
+			Once you are loaded into the game, supercharge sharp turning (by holding down left or down right) might not work immediately. If this is the case, use R3 + Up/Down to calibrate the sharp turn offset. Usually, the offset should be somewhere between -4 and 4 (available in version 0.3.1 Beta and later. To fix sharp turning in an earlier version, try reconnecting your controller and pray).
 		</p>
 	</div></center>
 
