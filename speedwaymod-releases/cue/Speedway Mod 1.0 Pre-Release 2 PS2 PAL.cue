@@ -1,3 +1,3 @@
-FILE "SpyroScales.bin" BINARY
+FILE "Speedway Mod 1.0 Pre-Release 2 PS2 PAL.bin" BINARY
   TRACK 01 MODE2/2352
     INDEX 01 00:00:00
