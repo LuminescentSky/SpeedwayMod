@@ -1,4 +1,5 @@
-document.getElementById("versionSelect").innerHTML += "<option value='11'>Speedway Mod 1.0 (Latest)</option>";
+document.getElementById("versionSelect").innerHTML += "<option value='12'>Speedway Mod 1.0.1 (Latest)</option>";
+document.getElementById("versionSelect").innerHTML += "<option value='11'>Speedway Mod 1.0</option>";
 document.getElementById("versionSelect").innerHTML += "<option value='10'>Speedway Mod 1.0 Pre-Release 2 </option>";
 document.getElementById("versionSelect").innerHTML += "<option value='9'>Speedway Mod 1.0 Pre-Release 1</option>";
 document.getElementById("versionSelect").innerHTML += "<option value='8'>Speedway Mod 0.4.2 Beta</option>";
@@ -38,6 +39,8 @@ function changeVersion() {
 		window.location.href = "./1.0-pre-2"
 	} else if (document.getElementById("versionSelect").value == 11) {
 		window.location.href = "./1.0"
+	} else if (document.getElementById("versionSelect").value == 12) {
+		window.location.href = "./1.0.1"
 	}
 }
 
