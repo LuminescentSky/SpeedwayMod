@@ -15,7 +15,7 @@ if (selectedVersion >= 0) {
 	document.getElementById("versionSelect").innerHTML += "<option value='1'>Speedway Mod 0.1.1 Beta</option>";
 	document.getElementById("versionSelect").innerHTML += "<option value='0'>Speedway Mod 0.1 Beta</option>";
 } else {
-	document.getElementById("versionSelect").innerHTML += "<option value='14'>Speedway Mod Dayo Edition 1.0.3 (Latest)</option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='-1'>Speedway Mod Dayo Edition 1.0.3 (Latest)</option>";
 }
 
 document.getElementById("versionSelect").value = selectedVersion;
