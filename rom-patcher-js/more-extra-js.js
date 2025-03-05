@@ -1,17 +1,22 @@
-document.getElementById("versionSelect").innerHTML += "<option value='13'>Speedway Mod 1.0.2 (Latest)</option>";
-document.getElementById("versionSelect").innerHTML += "<option value='12'>Speedway Mod 1.0.1</option>";
-document.getElementById("versionSelect").innerHTML += "<option value='11'>Speedway Mod 1.0</option>";
-document.getElementById("versionSelect").innerHTML += "<option value='10'>Speedway Mod 1.0 Pre-Release 2 </option>";
-document.getElementById("versionSelect").innerHTML += "<option value='9'>Speedway Mod 1.0 Pre-Release 1</option>";
-document.getElementById("versionSelect").innerHTML += "<option value='8'>Speedway Mod 0.4.2 Beta</option>";
-document.getElementById("versionSelect").innerHTML += "<option value='7'>Speedway Mod 0.4.1 Beta</option>";
-document.getElementById("versionSelect").innerHTML += "<option value='6'>Speedway Mod 0.4 Beta</option>";
-document.getElementById("versionSelect").innerHTML += "<option value='5'>Speedway Mod 0.3.2 Beta </option>";
-document.getElementById("versionSelect").innerHTML += "<option value='4'>Speedway Mod 0.3.1 Beta </option>";
-document.getElementById("versionSelect").innerHTML += "<option value='3'>Speedway Mod 0.3 Beta </option>";
-document.getElementById("versionSelect").innerHTML += "<option value='2'>Speedway Mod 0.2 Beta</option>";
-document.getElementById("versionSelect").innerHTML += "<option value='1'>Speedway Mod 0.1.1 Beta</option>";
-document.getElementById("versionSelect").innerHTML += "<option value='0'>Speedway Mod 0.1 Beta</option>";
+if (selectedVersion >= 0) {
+	document.getElementById("versionSelect").innerHTML += "<option value='14'>Speedway Mod 1.0.3 (Latest)</option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='13'>Speedway Mod 1.0.2</option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='12'>Speedway Mod 1.0.1</option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='11'>Speedway Mod 1.0</option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='10'>Speedway Mod 1.0 Pre-Release 2 </option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='9'>Speedway Mod 1.0 Pre-Release 1</option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='8'>Speedway Mod 0.4.2 Beta</option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='7'>Speedway Mod 0.4.1 Beta</option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='6'>Speedway Mod 0.4 Beta</option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='5'>Speedway Mod 0.3.2 Beta </option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='4'>Speedway Mod 0.3.1 Beta </option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='3'>Speedway Mod 0.3 Beta </option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='2'>Speedway Mod 0.2 Beta</option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='1'>Speedway Mod 0.1.1 Beta</option>";
+	document.getElementById("versionSelect").innerHTML += "<option value='0'>Speedway Mod 0.1 Beta</option>";
+} else {
+	document.getElementById("versionSelect").innerHTML += "<option value='14'>Speedway Mod Dayo Edition 1.0.3 (Latest)</option>";
+}
 
 document.getElementById("versionSelect").value = selectedVersion;
 
@@ -44,6 +49,10 @@ function changeVersion() {
 		window.location.href = "./1.0.1"
 	} else if (document.getElementById("versionSelect").value == 13) {
 		window.location.href = "./1.0.2"
+	} else if (document.getElementById("versionSelect").value == 14) {
+		window.location.href = "./1.0.3"
+	} else if (document.getElementById("versionSelect").value == -1) {
+		window.location.href = "./dayo-1.0.3"
 	}
 }
 
